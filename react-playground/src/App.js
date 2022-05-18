@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import './assets/css/App.css';
+import './assets/css/myStyle.css';
+import ContenedorPublicidad from './component/contenedorPublicidad';
+import PageContent from './component/PageContent';
+import Navigation from './component/Navigation';
+import VariosGif from './component/VariosGif';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <div className="App" id="wrapper">
+      <Navigation/>
+      ]<VariosGif/>
+      <ContenedorPublicidad>
+        <h2>publicidad 1 que puede ser una img </h2>
+      </ContenedorPublicidad>
+      <PageContent/>
+      <ContenedorPublicidad>
+        <h2>publicidad 2 que puede ser una video</h2>
+      </ContenedorPublicidad> 
+      </div>
+      
+    </React.Fragment>
   );
 }
 
